@@ -1,0 +1,20 @@
+name: "Auto Remediation"
+description: "Automatically remediate detected drift (containerized)."
+author: "gusvega"
+branding:
+  icon: "refresh-ccw"
+  color: "green"
+
+inputs:
+  workdir:
+    description: "Working directory"
+    required: false
+    default: "."
+  auto_approve:
+    description: "If true, run without prompting"
+    required: false
+    default: "false"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
